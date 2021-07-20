@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS GetTopMovieId(
+id int(128) PRIMARY KEY AUTO_INCREMENT,
+title varchar(128) NOT NULL
+)
