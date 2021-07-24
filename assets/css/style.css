@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+:root{
+		box-sizing: border-box;
+		font-size: calc(0.2em + 1vw);
+	}
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+h1, h2, h3, h4, h5, h6, p, a, div, span, li{
+font-family: 'Rubik', sans-serif;
+color: #fff;
+} 
+a{
+	text-decoration: none;
+	font-weight: 600;
+	transition: 0.3s;
+}
+li{
+	list-style: none;
+}
+body{
+	background-color: #0c1154;
+}
+li a:hover{
+	color: #5353e8;
+}
+
+.navigationbar{
+	position: fixed;
+	z-index: 1;
+	background-color: transparent;
+	padding: 1em 0em;
+}
+.nvgbres{
+	height: 11em;
+}
+.main-reset{
+	
+padding-top: 5em;
+}
+a:hover{
+	text-decoration: none;
+}
+.item a{
+	color: #fff;
+}
+.item a:hover{
+	color: #0059F7 !important;
+}
+.navbar-brand-name{
+	color: #fff !important;
+}
+.container-reset{
+	background: url(../img/img1.jpg);
+	background-size: cover;
+}
+	.menu {
+		justify-content: center;
+		align-items: center;
+	}
+	.logo {
+		flex: 1;
+	}
+	.item.button {
+		width: auto;
+		order: 1;
+		display: block;
+	}
+	.toggle {
+		flex: 1;
+		text-align: right;
+		order: 2;
+	}
+
+nav {
+    width: 100%;
+}
+
+.menu,
+.submenu {
+  list-style-type: none;
+}
+.logo {
+  font-size: 20px;
+  padding: 7.5px 20px 7.5px 80px;
+}
+.item {
+  padding: 10px;
+}
+.item.button {
+  padding: 9px 5px;
+}
+.item:not(.button) a:hover,
+.item a:hover::after {
+  color: #ccc;
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-left: 0em !important;
+  background-color: #070e27;
+  width: 100%;
+}
+.menu li a {
+  display: block;
+  padding: 15px 5px;
+}
+.menu li.subitem a {
+  padding: 15px;
+}
+.toggle {
+  order: 2;
+  font-size: 30px;
+  justify-content: flex-end;
+  padding-right: 1.5em;
+  display: flex;
+  overflow: hidden;
+}
+.toggle a{
+	width: 0;
+}
+.item.button {
+  order: 2;
+}
+.item {
+  order: 3;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+.active .item {
+  display: block;
+}
+.button.secondary {
+  /* divider between buttons and menu links */
+  border-bottom: 1px #444 solid;
+}
+/* Submenu up from mobile screens */
+.submenu {
+  display: none;
+}
+.submenu-active .submenu {
+  display: block;
+}
+.has-submenu i {
+  font-size: 12px;
+}
+.has-submenu > a::after {
+  font-family: "Font Awesome 5 Free";
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900;
+  content: "\f078";
+  color: white;
+  padding-left: 5px;
+}
+.subitem a {
+  padding: 10px 15px;
+}
+.submenu-active {
+  background-color: #111;
+  border-radius: 3px;
+}
+.login-btn{
+	background-color: #5353e8;
+	color: #fff;
+}
