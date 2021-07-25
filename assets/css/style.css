@@ -25,15 +25,56 @@ li{
 body{
 	background-color: #0c1154;
 }
+
+.movie-container::-webkit-scrollbar{
+	display: none;
+}
+::-webkit-scrollbar {
+    width: .5em;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: #7887ef;
+      -webkit-border-radius: 5em
+}
+
+/* Firefox browsers */
+
+.movie-container::-moz-scrollbar{
+	display: none;
+}
+::-moz-scrollbar {
+    width: .5em;
+}
+ 
+::-moz-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+::-moz-scrollbar-thumb {
+  background-color: #7887ef;
+      -webkit-border-radius: 5em
+}
+
+/*----------*/
+
 li a:hover{
 	color: #5353e8;
 }
 
 .navigationbar{
 	position: fixed;
-	z-index: 1;
+	z-index: 1000;
 	background-color: transparent;
-	padding: 1em 0em;
+	padding: .5em 0em;
+	transition: 0.2s;
+}
+.navigationbar.scrolled{
+	background-color: #0c1154;
 }
 .nvgbres{
 	height: 11em;
@@ -170,4 +211,15 @@ nav {
 .login-btn{
 	background-color: #5353e8;
 	color: #fff;
+}
+.button-scroll-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 9em;
+	position: sticky;
+	left: .1em;
+	z-index: 1;
+	padding-left: 2em;
+	width: 2em;
 }

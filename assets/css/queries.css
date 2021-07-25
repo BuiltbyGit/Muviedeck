@@ -108,14 +108,18 @@
   }
   .popular-movies{
   padding-top: 5em;
-  padding-left: 4em;
+  /* padding-left: 4em; */
 }
 .section-title{
   margin-bottom: 1.5em;
+  margin-left: 3em;
 }
 .movie-container{
   display: flex;
-  width: ;
+  width: 100%;
+  scrollbar-width: none;
+  overflow: auto;
+  position: relative;
 }
 .movie-img{
   width: 23em;
@@ -129,9 +133,29 @@
 }
 .movie-snip{
   margin-right: 1.5em;
+  margin-bottom: 1em;
+}
+.movie-snip:nth-child(2){
+  margin-left: -1em;
+}
+.scroll-btn{
+  position: sticky;
+  z-index: 1;
+  height: 3.5em;
+  border: none;
+  padding: 0em 1.5em;
+  border-radius: 33em;
+  background-color: #5e69d6;
+  color: #fff;
+  top: 6.5em;
+}
+.scroll-left{
+  /* left: 1.5em; */
+}
+.scroll-right{
+  right: 1.5em;
 }
 }
-/*Navigation bar styling*/
 
 
 

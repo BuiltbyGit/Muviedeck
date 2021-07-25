@@ -57,12 +57,9 @@
 		</section>
 		<section class="popular-movies">
 			<h1 class="section-title">Popular Movies Right Now</h1>
-			<div class="movie-container">
-				<div class="movie-snip">
-					<div class="movie-img">
-					</div>
-					<h1>Black widow</h1>
-					<p><span class="meta"></span>Action</p>
+			<div class="movie-container popular-movie-container">
+				<div class="button-scroll-container scroll-left">
+				<button class="scroll-btn scroll-btn-left" id="scroll-btn-left"><</button>
 				</div>
 				<div class="movie-snip">
 					<div class="movie-img">
@@ -87,10 +84,143 @@
 					</div>
 					<h1>Black widow</h1>
 					<p><span class="meta"></span>Action</p>
+				</div>
+				<div class="movie-snip">
+					<div class="movie-img">
+					</div>
+					<h1>Black widow</h1>
+					<p><span class="meta"></span>Action</p>
+				</div>
+				<div class="button-scroll-container scroll-right">
+				<button class="scroll-btn scroll-btn-right" id="scroll-btn-right">></button>
+				</div>
+			</div>
+		</section>
+				<section class="popular-movies">
+			<h1 class="section-title">New Movies</h1>
+			<div class="movie-container new-movie-container">
+				<div class="button-scroll-container scroll-left">
+				<button class="scroll-btn new-movies-btn-left"><</button>
+				</div>
+				<div class="movie-snip">
+					<div class="movie-img">
+					</div>
+					<h1>Black widow</h1>
+					<p><span class="meta"></span>Action</p>
+				</div>
+				<div class="movie-snip">
+					<div class="movie-img">
+					</div>
+					<h1>Black widow</h1>
+					<p><span class="meta"></span>Action</p>
+				</div>
+				<div class="movie-snip">
+					<div class="movie-img">
+					</div>
+					<h1>Black widow</h1>
+					<p><span class="meta"></span>Action</p>
+				</div>
+				<div class="movie-snip">
+					<div class="movie-img">
+					</div>
+					<h1>Black widow</h1>
+					<p><span class="meta"></span>Action</p>
+				</div>
+				<div class="movie-snip">
+					<div class="movie-img">
+					</div>
+					<h1>Black widow</h1>
+					<p><span class="meta"></span>Action</p>
+				</div>
+				<div class="button-scroll-container scroll-right">
+				<button class="scroll-btn new-movies-btn-right">></button>
+				</div>
+			</div>
+		</section>
+				<section class="popular-movies">
+			<h1 class="section-title">Top Series Right Now</h1>
+			<div class="movie-container top-series-container">
+				<div class="button-scroll-container scroll-left">
+				<button class="scroll-btn scroll-btn-left top-series-btn-left"><</button>
+				</div>
+				<div class="movie-snip">
+					<div class="movie-img">
+					</div>
+					<h1>Black widow</h1>
+					<p><span class="meta"></span>Action</p>
+				</div>
+				<div class="movie-snip">
+					<div class="movie-img">
+					</div>
+					<h1>Black widow</h1>
+					<p><span class="meta"></span>Action</p>
+				</div>
+				<div class="movie-snip">
+					<div class="movie-img">
+					</div>
+					<h1>Black widow</h1>
+					<p><span class="meta"></span>Action</p>
+				</div>
+				<div class="movie-snip">
+					<div class="movie-img">
+					</div>
+					<h1>Black widow</h1>
+					<p><span class="meta"></span>Action</p>
+				</div>
+				<div class="movie-snip">
+					<div class="movie-img">
+					</div>
+					<h1>Black widow</h1>
+					<p><span class="meta"></span>Action</p>
+				</div>
+				<div class="button-scroll-container scroll-right">
+				<button class="scroll-btn scroll-btn-right top-series-btn-right">></button>
+				</div>
+			</div>
+		</section>
+		<section class="popular-movies">
+			<h1 class="section-title">New Series</h1>
+			<div class="movie-container new-series-container">
+				<div class="button-scroll-container scroll-left">
+				<button class="scroll-btn scroll-btn-left new-series-btn-left"><</button>
+				</div>
+				<div class="movie-snip">
+					<div class="movie-img">
+					</div>
+					<h1>Black widow</h1>
+					<p><span class="meta"></span>Action</p>
+				</div>
+				<div class="movie-snip">
+					<div class="movie-img">
+					</div>
+					<h1>Black widow</h1>
+					<p><span class="meta"></span>Action</p>
+				</div>
+				<div class="movie-snip">
+					<div class="movie-img">
+					</div>
+					<h1>Black widow</h1>
+					<p><span class="meta"></span>Action</p>
+				</div>
+				<div class="movie-snip">
+					<div class="movie-img">
+					</div>
+					<h1>Black widow</h1>
+					<p><span class="meta"></span>Action</p>
+				</div>
+				<div class="movie-snip">
+					<div class="movie-img">
+					</div>
+					<h1>Black widow</h1>
+					<p><span class="meta"></span>Action</p>
+				</div>
+				<div class="button-scroll-container scroll-right">
+				<button class="scroll-btn scroll-btn-right new-series-btn-right">></button>
 				</div>
 			</div>
 		</section>
 		<script src="assets/js/jquery-min.js"></script>
+		<script src="assets/js/jsScroll"></script>
 		<script src="assets/js/main.js"></script>
 	</section>
 </body>
