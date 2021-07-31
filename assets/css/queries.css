@@ -8,14 +8,15 @@
 .movie-showcase{
   display: flex;
   flex-direction: column;
-  background-color: skyblue;
+  /* background-color: skyblue; */
   padding-top: 8em;
   padding-left: 6em;
   background-size: cover;
   background-position-y: -10em;
   position: absolute;
   bottom: 0px;
-  top: 0px; 
+  top: 0px;
+  background-size: cover !important;
 }
 .title-genre-year{
   display: flex;
@@ -107,7 +108,7 @@
     height: 70vh;
   }
   .popular-movies{
-  padding-top: 5em;
+  /* padding-top: 5em; */
   /* padding-left: 4em; */
 }
 .section-title{
@@ -154,6 +155,48 @@
 }
 .scroll-right{
   right: 1.5em;
+}
+.splash-loader {
+  border: 4px solid #f3f3f300; /* Light grey */
+  border-top: 4px solid #ffffff; /* Blue */
+  border-left: 4px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.preloader-add{
+    top: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #0c1154;
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.preloader-remove{
+  display: none;
+}
+.preloader-main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.preloader-logo{
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+.overflow-hidden{
+  overflow: hidden;
 }
 }
 

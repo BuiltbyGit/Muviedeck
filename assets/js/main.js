@@ -1,3 +1,5 @@
+let preLoader = document.getElementById('preloader');
+let OverflowHidden = document.getElementById('overflow-tweak');
 $("#movie-showcase:gt(0)").hide();
 
 setInterval(function() { 
@@ -78,3 +80,19 @@ $('.new-series-btn-left').click(function() {
     $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
   });
 });
+
+function onReady(){
+  preLoader.classList.remove('preloader-add');
+  preLoader.classList.add('preloader-remove');
+  OverflowHidden.classList.remove('overflow-hidden');
+
+}
+if(document.readyState !== "loading"){
+  setInterval(onReady(), 7000);
+  console.log('Setting the interval via ready state');
+} else {
+  document.addEventListener('DOMContentLoaded', ()=>{
+    setInterval(onReady(), 17000);
+    console.log('Setting the interval via ready state');
+  });
+}
