@@ -13,7 +13,7 @@
             <li class="logo"><a href="#">Muviedeck</a></li>
             <li class="item"><a href="#">Home</a></li>
             <li class="item"><a href="#" class="active">Popular</a></li>
-            <li class="item"><a href="#">Watchlist</a></li>
+            <li class="item"><a href="includes/watchlist.inc.php">Watchlist</a></li>
             <li class="item login-cont"><button class="login-btn">Login</button></li>
           <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
   </ul>
@@ -33,7 +33,7 @@
 				</div>
 				<div class="selection-btn">
 					<button class="select-btn">Watch Now</button>
-					<button class="select-btn select-btn-transparent">Add to watchlist</button>
+					<a href="watchlist.php"><button class="select-btn select-btn-transparent">Add to watchlist</button></a>
 				</div>
 			</div>
 		</div>
