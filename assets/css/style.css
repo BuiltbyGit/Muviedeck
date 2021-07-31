@@ -1,33 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 :root{
-		box-sizing: border-box;
-		font-size: calc(0.2em + 1vw);
-	}
+    box-sizing: border-box;
+    font-size: calc(0.2em + 1vw);
+  }
 *,
 ::before,
 ::after {
-	margin: 0;
-	padding: 0;
-	scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 h1, h2, h3, h4, h5, h6, p, a, div, span, li{
 font-family: 'Rubik', sans-serif;
 color: #fff;
 } 
 a{
-	text-decoration: none;
-	font-weight: 600;
-	transition: 0.3s;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
 }
 li{
-	list-style: none;
+  list-style: none;
 }
 body{
-	background-color: #0c1154;
+  background-color: #0c1154;
 }
 
 .movie-container::-webkit-scrollbar{
-	display: none;
+  display: none;
 }
 ::-webkit-scrollbar {
     width: .5em;
@@ -45,7 +45,7 @@ body{
 /* Firefox browsers */
 
 .movie-container::-moz-scrollbar{
-	display: none;
+  display: none;
 }
 ::-moz-scrollbar {
     width: .5em;
@@ -63,59 +63,59 @@ body{
 /*----------*/
 
 li a:hover{
-	color: #5353e8;
+  color: #5353e8;
 }
 
 .navigationbar{
-	position: fixed;
-	z-index: 1000;
-	background-color: transparent;
-	padding: .5em 0em;
-	transition: 0.2s;
+  position: fixed;
+  z-index: 1000;
+  background-color: transparent;
+  padding: .5em 0em;
+  transition: 0.2s;
 }
 .navigationbar.scrolled{
-	background-color: #0c1154;
+  background-color: #0c1154;
 }
 .nvgbres{
-	height: 11em;
+  height: 11em;
 }
 .main-reset{
-	
+  
 padding-top: 5em;
 }
 a:hover{
-	text-decoration: none;
+  text-decoration: none;
 }
 .item a{
-	color: #fff;
+  color: #fff;
 }
 .item a:hover{
-	color: #0059F7 !important;
+  color: #0059F7 !important;
 }
 .navbar-brand-name{
-	color: #fff !important;
+  color: #fff !important;
 }
 .container-reset{
-	background: url(../img/img1.jpg);
-	background-size: cover;
+  background: url(../img/img1.jpg);
+  background-size: cover;
 }
-	.menu {
-		justify-content: center;
-		align-items: center;
-	}
-	.logo {
-		flex: 1;
-	}
-	.item.button {
-		width: auto;
-		order: 1;
-		display: block;
-	}
-	.toggle {
-		flex: 1;
-		text-align: right;
-		order: 2;
-	}
+  .menu {
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    flex: 1;
+  }
+  .item.button {
+    width: auto;
+    order: 1;
+    display: block;
+  }
+  .toggle {
+    flex: 1;
+    text-align: right;
+    order: 2;
+  }
 
 nav {
     width: 100%;
@@ -164,7 +164,7 @@ nav {
   overflow: hidden;
 }
 .toggle a{
-	width: 0;
+  width: 0;
 }
 .item.button {
   order: 2;
@@ -209,19 +209,19 @@ nav {
   border-radius: 3px;
 }
 .login-btn{
-	background-color: #5353e8;
-	color: #fff;
+  background-color: #5353e8;
+  color: #fff;
 }
 .button-scroll-container{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding-bottom: 9em;
-	position: sticky;
-	left: .1em;
-	z-index: 1;
-	padding-left: 2em;
-	width: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 9em;
+  position: sticky;
+  left: .1em;
+  z-index: 1;
+  padding-left: 2em;
+  width: 2em;
 }
 .movies-showcase{
   height: 100vh;
@@ -330,7 +330,7 @@ nav {
     height: 70vh;
   }
   .popular-movies{
-  padding-top: 5em;
+  /* padding-top: 5em; */
   /* padding-left: 4em; */
 }
 .section-title{
@@ -377,4 +377,103 @@ nav {
 }
 .scroll-right{
   right: 1.5em;
+}
+.login-banner{
+  padding: 0em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-banner-main{
+  background: linear-gradient(180deg, #0c115461, #0c115461), url(../img/moviecollage.webp);
+  background-size: cover;
+  width: 100%;
+  height: 22em;
+  border-radius: 1em;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-main{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 30em;
+  background-color: white;
+  position: relative;
+  bottom: 8em;
+  border-radius: 1.5em;
+}
+.login-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0em 2.2em;
+}
+.input-class{padding: 1em 1em;font-size: 1rem;margin-bottom: 1em;border-radius: .3em;border: none;width: 18em;box-shadow: 0px 0px 11px 0px #d8d8d8;}
+.login-main h1{
+  color: #0c1154;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.forgot-pass{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 2em;
+}
+.forgot-pass a{
+  color: #0c1154;
+  font-weight: 100;
+  font-size: .8rem;
+}
+.login-login-btn{
+  
+padding: 1.1em 7em !important;
+  
+border-radius: .5em !important;
+}
+.already{
+  justify-content: center;
+}
+.login-banner-main h1{
+  margin-bottom: .5em;
+  margin-top: 1em;
+}
+.login-banner-main p{
+  font-weight: 100
+}
+.login-nav-override{
+position: initial;
+}
+.signup-main{
+  height: 40em;
+}
+.input-check-box{
+  font-size: .8rem;
+    font-weight: 100;
+  color: #131313;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-check{
+  margin-right: .5em;
+}
+.error-message, .success-message{
+  color: #131313;
+  width: 90%;
+  font-weight: 100;
+  font-size: .8rem;
+  margin-top: .2em;
+  margin-bottom: 1em;
+  background-color: #ffb9b9;
+  padding: .7em 1em;
+  border-radius: .2em;
+}
+.success-message{
+  background-color: #b9ffda;
 }

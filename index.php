@@ -34,7 +34,10 @@ $ComingMoviesMeta = $conn->query('SELECT * FROM comingmoviesmeta');
             <li class="item"><a href="#">Home</a></li>
             <li class="item"><a href="#" class="active">Popular</a></li>
             <li class="item"><a href="#">Watchlist</a></li>
-            <li class="item login-cont"><button class="login-btn">Login</button></li>
+            <li class="item login-cont">
+            	<form action="login.php">
+            	<button class="login-btn">Login</button>
+            </form></li>
           <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
   </ul>
       </nav>
