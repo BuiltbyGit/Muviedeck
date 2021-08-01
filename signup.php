@@ -15,8 +15,6 @@
         } else if ($_GET['error'] == "stmtfailed") {
             $errors['stmtfailed'] = "Something went wrong";
         } else if ($_GET['error'] == "none") {
-            $errors['none'] = "Sign up successful!";
-            header('location: login.php?error=none');
             session_unset();
             session_destroy();
         }
