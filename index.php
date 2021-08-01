@@ -29,28 +29,42 @@ $ComingMoviesMeta = $conn->query('SELECT * FROM comingmoviesmeta');
 
 	</div>
 	<nav class="navigationbar">
+		<?php session_start(); ?>
                 <ul class="menu">
             <li class="logo"><a href="#">Muviedeck</a></li>
             <li class="item"><a href="#">Home</a></li>
             <li class="item"><a href="#" class="active">Popular</a></li>
-            <li class="item"><a href="#">Watchlist</a></li>
-            <li class="item login-cont">
-            	<form action="login.php">
-            	<button class="login-btn">Login</button>
-            </form></li>
+			<?php 
+				if (isset($_SESSION['username'])) {?>
+			<li class="item"><a href="watchlist.php">Watchlist</a></li>
+			<li class="item login-cont">
+				<form action="logout.php">
+					<button class="login-btn">Logout</button>
+				</form>
+			</li>
+			<?php } else { ?>
+						<li class="item login-cont">
+						<form action="login.php">
+            				<button class="login-btn">Login</button>
+            			</form>
+						</li>
+			<?php } ?>
+            	
           <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
   </ul>
       </nav>
 	<section class="movies-showcase" id="movies-showcase">
+		<a href="details.php"></a>
 		<?php 
+
 		if($glanceMovies->num_rows > 0){
 			while($row = $glanceMovies->fetch_assoc()){
 				echo '<div class="movie-showcase" style="
 		background: linear-gradient(180deg, #0a0e4612, #0c1154), url('.$row['MoviePoster'].');
 		">
-			<div class="title-genre-year">
-				<h1>'.$row['MovieTitle'].'</h1>
-				<div class="year-genre">
+			<div class="title-genre-year">'?>
+				<h1><a href="details.php?id=<?php echo htmlspecialchars($row['MovieId']); ?>"><?php echo $row['MovieTitle']?></a></h1>
+				<?php echo '<div class="year-genre">
 					<p>'.$row['MovieReleaseDate'].
 						'</p>
 					<p>'.$row['MovieRating'].'</p>
@@ -59,15 +73,19 @@ $ComingMoviesMeta = $conn->query('SELECT * FROM comingmoviesmeta');
 					'.$row['MoviePlot'].'
 				</div>
 				<div class="selection-btn">
-					<button class="select-btn">Watch Now</button>
-					<button class="select-btn select-btn-transparent">Add to watchlist</button>
+					<button class="select-btn">Watch Now</button>'
+					?>
+					
+					<button name="btn-add" class="select-btn select-btn-transparent"><a href="includes/watchlist.inc.php?id=<?php echo htmlspecialchars($row['MovieId']); ?>">Add to watchlist</a></button>
+				<?php echo '
 				</div>
 			</div>
 		</div>';
+		
 			}
 		}
-
-		 ?>
+		?>
+		 
 		</section>
 		<section class="popular-movies">
 			<h1 class="section-title">Popular Movies Right Now</h1>
@@ -77,15 +95,14 @@ $ComingMoviesMeta = $conn->query('SELECT * FROM comingmoviesmeta');
 				</div>
 				<?php 
 				if($PopularMovies->num_rows > 0){
-while($row = $PopularMovies->fetch_assoc()){
-	echo '<div class="movie-snip">
-					<div class="movie-img" style="background: url('.$row['MoviePoster'].');">
-					</div>
-					<h1>'.$row['MovieTitle'].'</h1>
-					<p><span class="meta"></span>'.$row['MovieRating'].'</p>
-				</div>';
-}
-				 
+					while($row = $PopularMovies->fetch_assoc()){
+						echo '<div class="movie-snip">
+						<div class="movie-img" style="background: url('.$row['MoviePoster'].');">
+						</div>'?>
+						<h1><a href="details.php?id=<?php echo htmlspecialchars($row['MovieId']); ?>"><?php echo $row['MovieTitle']?></a></h1>
+						<?php echo '<p><span class="meta"></span>'.$row['MovieRating'].'</p>						
+						</div>';
+					}
 				}
 				?>
 				<div class="button-scroll-container scroll-right">
@@ -101,13 +118,13 @@ while($row = $PopularMovies->fetch_assoc()){
 				</div>
 				<?php 
 				if($TopRatedMovies->num_rows > 0){
-while($row = $TopRatedMovies->fetch_assoc()){
-	echo '<div class="movie-snip">
-					<div class="movie-img" style="background: url('.$row['MoviePoster'].');">
-					</div>
-					<h1>'.$row['MovieTitle'].'</h1>
-					<p><span class="meta"></span>'.$row['MovieRating'].'</p>
-				</div>';
+					while($row = $TopRatedMovies->fetch_assoc()){
+						echo '<div class="movie-snip">
+							<div class="movie-img" style="background: url('.$row['MoviePoster'].');">
+							</div>'?>
+						<h1><a href="details.php?id_top_rated=<?php echo htmlspecialchars($row['MovieId']); ?>"><?php echo $row['MovieTitle']?></a></h1>
+						<?php echo '<p><span class="meta"></span>'.$row['MovieRating'].'</p>						
+						</div>';;
 }
 				 
 				}
@@ -126,13 +143,13 @@ while($row = $TopRatedMovies->fetch_assoc()){
 				</div>
 				<?php 
 				if($PopularSeriesMeta->num_rows > 0){
-while($row = $PopularSeriesMeta->fetch_assoc()){
-	echo '<div class="movie-snip">
-					<div class="movie-img" style="background: url('.$row['MoviePoster'].');">
-					</div>
-					<h1>'.$row['MovieTitle'].'</h1>
-					<p><span class="meta"></span>'.$row['MovieRating'].'</p>
-				</div>';
+					while($row = $PopularSeriesMeta->fetch_assoc()){
+						echo '<div class="movie-snip">
+						<div class="movie-img" style="background: url('.$row['MoviePoster'].');">
+						</div>'?>
+					<h1><a href="details.php?id_top_series=<?php echo htmlspecialchars($row['MovieId']); ?>"><?php echo $row['MovieTitle']?></a></h1>
+					<?php echo '<p><span class="meta"></span>'.$row['MovieRating'].'</p>						
+					</div>';
 }
 				 
 				}
@@ -151,16 +168,16 @@ while($row = $PopularSeriesMeta->fetch_assoc()){
 
 				<?php 
 				if($ComingMoviesMeta->num_rows > 0){
-while($row = $ComingMoviesMeta->fetch_assoc()){
-	echo '<div class="movie-snip">
-					<div class="movie-img" style="background: url('.$row['MoviePoster'].');">
-					</div>
-					<h1>'.$row['MovieTitle'].'</h1>
-					<p><span class="meta"></span>'.$row['MovieRating'].'</p>
-				</div>';
-}
+					while($row = $ComingMoviesMeta->fetch_assoc()){
+						echo '<div class="movie-snip">
+						<div class="movie-img" style="background: url('.$row['MoviePoster'].');">
+						</div>'?>
+					<h1><a href="details.php?id_coming_movies=<?php echo htmlspecialchars($row['MovieId']); ?>"><?php echo $row['MovieTitle']?></a></h1>
+					<?php echo '<p><span class="meta"></span>'.$row['MovieRating'].'</p>						
+					</div>';
+					}
 				 
-				}
+					}
 				?>
 				
 				<div class="button-scroll-container scroll-right">

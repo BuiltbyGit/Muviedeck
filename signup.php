@@ -49,9 +49,9 @@
                 <nav class="navigationbar login-nav-override">
                 <ul class="menu">
             <li class="logo"><a href="index.php">Muviedeck</a></li>
-            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="index.php">Home</a></li>
             <li class="item"><a href="#" class="active">Popular</a></li>
-            <li class="item"><a href="#">Watchlist</a></li>
+            <!-- <li class="item"><a href="watchlist.php">Watchlist</a></li> -->
           <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
   </ul>
       </nav>
