@@ -1,29 +1,29 @@
+
+
 CREATE TABLE IF NOT EXISTS GetTopMovieId(
 id int(128) PRIMARY KEY AUTO_INCREMENT,
 title varchar(128) NOT NULL
-)
+);
 
 CREATE TABLE IF NOT EXISTS GetComingMoviesId(
 id int(128) PRIMARY KEY AUTO_INCREMENT,
 title varchar(128) NOT NULL
-)
+);
 
 CREATE TABLE IF NOT EXISTS GetPopularSeriesId(
 id int(128) PRIMARY KEY AUTO_INCREMENT,
 title varchar(128) NOT NULL
-)
+);
 
 CREATE TABLE IF NOT EXISTS GetTopRatedMoviesId(
 id int(128) PRIMARY KEY AUTO_INCREMENT,
 title varchar(128) NOT NULL
-)
+);
 
 CREATE TABLE IF NOT EXISTS getTopRatedSeriesId(
 id int(128) PRIMARY KEY AUTO_INCREMENT,
 title varchar(128) NOT NULL
-)
-
-
+);
 
 CREATE TABLE users(
     usersId INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -31,7 +31,9 @@ CREATE TABLE users(
     usersUsername VARCHAR(128) NOT NULL,
     usersEmail VARCHAR(128) NOT NULL,
     usersPassword VARCHAR(128) NOT NULL 
-    );
+);
+
+
 
 CREATE TABLE TopmovieMeta(
 
@@ -45,7 +47,7 @@ MovieReleaseDate VARCHAR(128) NOT NULL,
 MovieCast VARCHAR(900) NOT NULL,
 MovieLanguage VARCHAR(128) NOT NULL
 
-)
+);
 
 CREATE TABLE popularseriesmeta(
 
@@ -58,8 +60,7 @@ MoviePoster VARCHAR(256) NOT NULL,
 MovieReleaseDate VARCHAR(128) NOT NULL,
 MovieCast VARCHAR(900) NOT NULL,
 MovieLanguage VARCHAR(128) NOT NULL
-
-)
+);
 
 CREATE TABLE topratedseriesmeta(
 
@@ -73,7 +74,7 @@ MovieReleaseDate VARCHAR(128) NOT NULL,
 MovieCast VARCHAR(900) NOT NULL,
 MovieLanguage VARCHAR(128) NOT NULL
 
-)
+);
 
 CREATE TABLE topratedmoviemeta(
 
@@ -87,7 +88,7 @@ MovieReleaseDate VARCHAR(128) NOT NULL,
 MovieCast VARCHAR(900) NOT NULL,
 MovieLanguage VARCHAR(128) NOT NULL
 
-)
+);
 
 CREATE TABLE comingmoviesmeta(
 
@@ -101,4 +102,16 @@ MovieReleaseDate VARCHAR(128) NOT NULL,
 MovieCast VARCHAR(900) NOT NULL,
 MovieLanguage VARCHAR(128) NOT NULL
 
-)
+);
+
+
+CREATE TABLE watchlist(
+    watchlistId INT(128) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    MoviePoster VARCHAR(256) NOT NULL,
+    MovieTitle VARCHAR(128) NOT NULL,
+    MovieRating VARCHAR(128) NOT NULL,
+    MoviePlot VARCHAR(600) NOT NULL,
+    MovieId VARCHAR(11) NOT NULL,
+    MovieCast VARCHAR(900) NOT NULL,
+    MovieRuntime VARCHAR(128) NOT NULL
+);
